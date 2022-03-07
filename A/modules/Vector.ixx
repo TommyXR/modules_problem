@@ -4,19 +4,24 @@ module;
 
 export module A.Vector;
 
-template<typename T>
-class Vec: private std::vector<T>
+
+
+export
 {
-  public:
-      using std::vector<T>::push_back;
-      void pop();
-
-};
-
+	template<typename T>
+	class Vec: private std::vector<T>
+	{
+	public:
+		using std::vector<T>::push_back;
+		using std::vector<T>::front;
+		void pop();
+	};
+}
 
 module: private;
 
 template<typename T>
-void Vec<T>::pop() { 
-    std::vector<T>::pop_back();
+void Vec<T>::pop()
+{
+	std::vector<T>::pop_back();
 }

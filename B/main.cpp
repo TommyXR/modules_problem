@@ -1,8 +1,12 @@
 #include "stdafx.h"
 
+#include <iostream>
+
 int main()
 {
 
-    Dummy d;
+	Vec<int> v;
+	v.push_back( 50 );
 
+	std::cout << v.front();
 }
